@@ -26,12 +26,13 @@ delegate:nil cancelButtonTitle:(buttonName) otherButtonTitles: nil];\
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 适用于一个字符串中有两种颜色的 并且字体大小不一样的
     NSString *oneStr=@"合计: ¥100.00";
     [AttributedLbl setRichText:self.oneLbl titleString:oneStr textFont:[UIFont systemFontOfSize:25] fontRang:NSMakeRange(4, oneStr.length-4) textColor:[UIColor redColor] colorRang:NSMakeRange(4, oneStr.length-4)];
-    
+    // 适用于一个字符串中有两种颜色的但是不是在一个位置的中间有被叉开  并且字体大小不一样的
     NSString *twoStr=@"今天我花了¥100.00元 在路上捡了¥50.00元";
     [AttributedLbl setRichTwoText:self.twoLbl titleString:twoStr textFirstFont:[UIFont systemFontOfSize:22] fontFirstRang:NSMakeRange(5, 7) textFirstColor:[UIColor redColor] colorFirstRang:NSMakeRange(5, 7) textSecondFont:[UIFont systemFontOfSize:22] fontSecondRang:NSMakeRange(19, 6) textSecondColor:[UIColor redColor] colorSecondRang:NSMakeRange(19, 6)];
-    
+    // 适用于两种字体大小 一种颜色 比如 原价¥100  ¥字体为12号 100位18号, 原价14号
     NSString *threeStr=@"原价: ¥100.00";
     [AttributedLbl setRichTextTwoTypsFontAndColor:self.threeLbl titleString:threeStr textColor:[UIColor redColor] colorRang:NSMakeRange(4, threeStr.length-4) textFirstFont:[UIFont systemFontOfSize:17] fontFirstRang:NSMakeRange(4, 1) textSecondFont:[UIFont systemFontOfSize:35] fontSecondRang:NSMakeRange(5, threeStr.length-5)];
     
