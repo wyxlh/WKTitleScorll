@@ -1,0 +1,5 @@
+platform :ios, ‘7.0‘
+
+target “Demo” do
+pod 'LBXScan', '~> 1.1.1'
+end
