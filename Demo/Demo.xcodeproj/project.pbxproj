@@ -17,6 +17,8 @@
 		883D20561EBADDA100218DB9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 883D20511EBADDA100218DB9 /* UIView+Frame.m */; };
 		883D20571EBADDA100218DB9 /* TitleScrollHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 883D20521EBADDA100218DB9 /* TitleScrollHelper.m */; };
 		883D20581EBADDA100218DB9 /* TitleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 883D20551EBADDA100218DB9 /* TitleScrollView.m */; };
+		883D20701EBB434C00218DB9 /* UILabel+YBAttributeTextTapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 883D206F1EBB434C00218DB9 /* UILabel+YBAttributeTextTapAction.m */; };
+		883D20731EBB435B00218DB9 /* WKAttributdeLblViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 883D20721EBB435B00218DB9 /* WKAttributdeLblViewController.m */; };
 		884E14101E8B5ECF00E918FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 884E140F1E8B5ECF00E918FF /* main.m */; };
 		884E14131E8B5ECF00E918FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 884E14121E8B5ECF00E918FF /* AppDelegate.m */; };
 		884E14161E8B5ECF00E918FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 884E14151E8B5ECF00E918FF /* ViewController.m */; };
@@ -63,6 +65,10 @@
 		883D20531EBADDA100218DB9 /* TitleScrollHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScrollHelper.h; sourceTree = "<group>"; };
 		883D20541EBADDA100218DB9 /* TitleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScrollView.h; sourceTree = "<group>"; };
 		883D20551EBADDA100218DB9 /* TitleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScrollView.m; sourceTree = "<group>"; };
+		883D206E1EBB434C00218DB9 /* UILabel+YBAttributeTextTapAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YBAttributeTextTapAction.h"; sourceTree = "<group>"; };
+		883D206F1EBB434C00218DB9 /* UILabel+YBAttributeTextTapAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YBAttributeTextTapAction.m"; sourceTree = "<group>"; };
+		883D20711EBB435B00218DB9 /* WKAttributdeLblViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKAttributdeLblViewController.h; sourceTree = "<group>"; };
+		883D20721EBB435B00218DB9 /* WKAttributdeLblViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKAttributdeLblViewController.m; sourceTree = "<group>"; };
 		884E140B1E8B5ECF00E918FF /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		884E140F1E8B5ECF00E918FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		884E14111E8B5ECF00E918FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -126,6 +132,8 @@
 			children = (
 				880687031EAF72320007F77C /* AttributedLbl.h */,
 				880687041EAF72320007F77C /* AttributedLbl.m */,
+				883D206E1EBB434C00218DB9 /* UILabel+YBAttributeTextTapAction.h */,
+				883D206F1EBB434C00218DB9 /* UILabel+YBAttributeTextTapAction.m */,
 			);
 			path = AttributedString;
 			sourceTree = "<group>";
@@ -174,6 +182,8 @@
 				8822C69E1E8BA87B006FB3B5 /* WKChildViewController.h */,
 				8806C80D1E9F1B8700042BE1 /* ShowImageViewController.h */,
 				8806C80E1E9F1B8700042BE1 /* ShowImageViewController.m */,
+				883D20711EBB435B00218DB9 /* WKAttributdeLblViewController.h */,
+				883D20721EBB435B00218DB9 /* WKAttributdeLblViewController.m */,
 				884E14111E8B5ECF00E918FF /* AppDelegate.h */,
 				884E14121E8B5ECF00E918FF /* AppDelegate.m */,
 				884E14141E8B5ECF00E918FF /* ViewController.h */,
@@ -409,7 +419,9 @@
 				8822C6A01E8BA87B006FB3B5 /* WKChildViewController.m in Sources */,
 				880687051EAF72320007F77C /* AttributedLbl.m in Sources */,
 				884E14161E8B5ECF00E918FF /* ViewController.m in Sources */,
+				883D20701EBB434C00218DB9 /* UILabel+YBAttributeTextTapAction.m in Sources */,
 				883D20581EBADDA100218DB9 /* TitleScrollView.m in Sources */,
+				883D20731EBB435B00218DB9 /* WKAttributdeLblViewController.m in Sources */,
 				883D20561EBADDA100218DB9 /* UIView+Frame.m in Sources */,
 				884E14131E8B5ECF00E918FF /* AppDelegate.m in Sources */,
 				884E14101E8B5ECF00E918FF /* main.m in Sources */,

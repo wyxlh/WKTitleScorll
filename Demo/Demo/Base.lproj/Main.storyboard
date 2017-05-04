@@ -57,7 +57,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="NZ9-U4-aNH"/>
+                    <navigationItem key="navigationItem" id="NZ9-U4-aNH">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="r5N-Fk-Vpi">
+                            <connections>
+                                <segue destination="h63-mP-z3J" kind="push" id="51J-nL-NGH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imgView" destination="Zl0-o6-z66" id="oLf-XY-3wc"/>
                     </connections>
@@ -88,6 +94,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mN4-Jw-D31" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-20" y="106.59670164917542"/>
+        </scene>
+        <!--富文本-->
+        <scene sceneID="cD3-Z9-Bqj">
+            <objects>
+                <viewController id="h63-mP-z3J" customClass="WKAttributdeLblViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DCm-GW-T9p"/>
+                        <viewControllerLayoutGuide type="bottom" id="KTA-O5-CML"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="McU-zc-uRu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合计: 100元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JA5-3w-FxE">
+                                <rect key="frame" x="143" y="70" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRR-oq-Yed">
+                                <rect key="frame" x="167" y="136" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVV-W7-xGJ">
+                                <rect key="frame" x="167" y="207" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTw-z0-RNn">
+                                <rect key="frame" x="167" y="278" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECO-03-Zv9">
+                                <rect key="frame" x="167" y="349" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="来呀, 快活呀" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loc-9G-XcC">
+                                <rect key="frame" x="140" y="420" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ECO-03-Zv9" firstAttribute="top" secondItem="YTw-z0-RNn" secondAttribute="bottom" constant="50" id="1CR-BK-EkE"/>
+                            <constraint firstItem="YTw-z0-RNn" firstAttribute="centerX" secondItem="McU-zc-uRu" secondAttribute="centerX" id="1PT-Gh-xEc"/>
+                            <constraint firstItem="loc-9G-XcC" firstAttribute="centerX" secondItem="McU-zc-uRu" secondAttribute="centerX" id="2qe-bh-Vll"/>
+                            <constraint firstItem="JVV-W7-xGJ" firstAttribute="top" secondItem="HRR-oq-Yed" secondAttribute="bottom" constant="50" id="5aA-bu-efI"/>
+                            <constraint firstItem="HRR-oq-Yed" firstAttribute="top" secondItem="JA5-3w-FxE" secondAttribute="bottom" constant="45" id="HNz-r6-pEo"/>
+                            <constraint firstItem="JA5-3w-FxE" firstAttribute="top" secondItem="DCm-GW-T9p" secondAttribute="bottom" constant="50" id="JrV-co-CRV"/>
+                            <constraint firstItem="HRR-oq-Yed" firstAttribute="centerX" secondItem="McU-zc-uRu" secondAttribute="centerX" id="LYl-vN-ZdE"/>
+                            <constraint firstItem="JVV-W7-xGJ" firstAttribute="centerX" secondItem="McU-zc-uRu" secondAttribute="centerX" id="bQw-rO-6n4"/>
+                            <constraint firstItem="ECO-03-Zv9" firstAttribute="centerX" secondItem="McU-zc-uRu" secondAttribute="centerX" id="djV-eA-AIp"/>
+                            <constraint firstItem="JA5-3w-FxE" firstAttribute="centerX" secondItem="McU-zc-uRu" secondAttribute="centerX" id="drI-B8-UBd"/>
+                            <constraint firstItem="YTw-z0-RNn" firstAttribute="top" secondItem="JVV-W7-xGJ" secondAttribute="bottom" constant="50" id="h5G-ms-b86"/>
+                            <constraint firstItem="loc-9G-XcC" firstAttribute="top" secondItem="ECO-03-Zv9" secondAttribute="bottom" constant="50" id="tYI-wm-jYk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="富文本" id="GvJ-7c-LwA"/>
+                    <connections>
+                        <outlet property="fiveLbl" destination="ECO-03-Zv9" id="sfH-k1-Utj"/>
+                        <outlet property="fourLbl" destination="YTw-z0-RNn" id="NV4-YF-ZA5"/>
+                        <outlet property="oneLbl" destination="JA5-3w-FxE" id="TQz-7B-47K"/>
+                        <outlet property="sixLbl" destination="loc-9G-XcC" id="Epg-2x-qXC"/>
+                        <outlet property="threeLbl" destination="JVV-W7-xGJ" id="1ok-67-aG5"/>
+                        <outlet property="twoLbl" destination="HRR-oq-Yed" id="lJ3-Sr-QGh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XEZ-3G-cUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2402" y="17"/>
         </scene>
     </scenes>
 </document>
