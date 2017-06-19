@@ -20,6 +20,7 @@ delegate:nil cancelButtonTitle:(buttonName) otherButtonTitles: nil];\
 @property (weak, nonatomic) IBOutlet UILabel *fourLbl;
 @property (weak, nonatomic) IBOutlet UILabel *fiveLbl;
 @property (weak, nonatomic) IBOutlet UILabel *sixLbl;
+@property (weak, nonatomic) IBOutlet UILabel *senvenLbl;
 @end
 
 @implementation WKAttributdeLblViewController
@@ -45,12 +46,20 @@ delegate:nil cancelButtonTitle:(buttonName) otherButtonTitles: nil];\
     //这个是借鉴的别人的
     [_sixLbl yb_addAttributeTapActionWithStrings:@[@"点击我呀"] delegate:self];
     
+    NSString *senvenStr = @"我在马路上捡到一元钱\n拿去交给警察叔叔";
+    
+    [AttributedLbl setRiChLineSpacing:self.senvenLbl titleString:senvenStr textColor:[UIColor redColor] colorRang:NSMakeRange(10, senvenStr.length-10) LineSpacing:10];
+    
+    
+    
 }
 //delegate
 - (void)yb_attributeTapReturnString:(NSString *)string range:(NSRange)range index:(NSInteger)index
 {
     NSString *message = [NSString stringWithFormat:@"点击了“%@”字符\nrange: %@\nindex: %ld",string,NSStringFromRange(range),index];
     WKAlertShow(message, @"取消");
+}
+- (IBAction)updataPsw:(id)sender {
 }
 
 

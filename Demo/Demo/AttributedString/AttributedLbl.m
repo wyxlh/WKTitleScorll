@@ -70,4 +70,21 @@
     [lable setAttributedText:Attributed];
 }
 
++(void)setRiChLineSpacing:(UILabel *)lable titleString:(NSString *)titleString textColor:(UIColor *)textColor colorRang:(NSRange)colorRang LineSpacing:(CGFloat )LineSpacing{
+    
+    NSMutableAttributedString *Attributed = [[NSMutableAttributedString alloc] initWithString:titleString];
+    
+    [Attributed addAttribute:NSForegroundColorAttributeName value:textColor range:colorRang];
+    
+    NSMutableParagraphStyle  *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    // 行间距设置为4
+    [paragraphStyle  setLineSpacing:5];
+    
+    [Attributed  addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [titleString length])];
+    //    设置之后 为了让位子居中显示
+    [paragraphStyle setAlignment:NSTextAlignmentCenter];
+    
+    [lable setAttributedText:Attributed];
+}
+
 @end

@@ -73,4 +73,16 @@
  */
 +(void)setRichTextOnlyFont:(UILabel *)lable titleString:(NSString *)titleString  textFont:(UIFont *)textFont fontRang:(NSRange)fontRang;
 
+
+/**
+ 设置行间距
+
+ @param lable lable
+ @param titleString titleString
+ @param textColor textColor
+ @param colorRang colorRang
+ @param LineSpacing LineSpacing
+ */
++(void)setRiChLineSpacing:(UILabel *)lable titleString:(NSString *)titleString textColor:(UIColor *)textColor colorRang:(NSRange)colorRang LineSpacing:(CGFloat )LineSpacing;
+
 @end
