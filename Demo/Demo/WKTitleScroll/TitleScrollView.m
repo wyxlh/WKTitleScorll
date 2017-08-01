@@ -2,8 +2,8 @@
 //  TitleScrollView.m
 //  titleScrollViewTest
 //
-//  Created by GCF on 16/5/17.
-//  Copyright © 2016年 GCF. All rights reserved.
+//  Created by 王宇 on 16/5/17.
+//  Copyright © 2016年 wy. All rights reserved.
 //
 
 #import "TitleScrollView.h"
