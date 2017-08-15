@@ -83,6 +83,10 @@ child.index = i;
 }
 }
 ```
+# 新增 TitleScrollView 选中字体变大  isLarger 以及 界面不均分的情况 就像今日头条的那种 详情请见 Demo
+* 初始化的时候设置即可
+![界面演示 gif图](https://github.com/wyxlh/WKTitleScorll/blob/master/QQ20170815-143427-HD.gif)
+
 # 富文本的使用 
 * 详细见 WKAttributdeLblViewController 这里面的
 * 新增富文本, 设置行间距

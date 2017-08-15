@@ -27,6 +27,7 @@
 		884E141E1E8B5ECF00E918FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 884E141C1E8B5ECF00E918FF /* LaunchScreen.storyboard */; };
 		884E14291E8B5ED000E918FF /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 884E14281E8B5ED000E918FF /* DemoTests.m */; };
 		884E14341E8B5ED000E918FF /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 884E14331E8B5ED000E918FF /* DemoUITests.m */; };
+		889886731F42CB2900AFBEB6 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889886721F42CB2900AFBEB6 /* LeftViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		884E142F1E8B5ED000E918FF /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		884E14331E8B5ED000E918FF /* DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoUITests.m; sourceTree = "<group>"; };
 		884E14351E8B5ED000E918FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		889886711F42CB2900AFBEB6 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		889886721F42CB2900AFBEB6 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,8 @@
 				884E14121E8B5ECF00E918FF /* AppDelegate.m */,
 				884E14141E8B5ECF00E918FF /* ViewController.h */,
 				884E14151E8B5ECF00E918FF /* ViewController.m */,
+				889886711F42CB2900AFBEB6 /* LeftViewController.h */,
+				889886721F42CB2900AFBEB6 /* LeftViewController.m */,
 				884E14171E8B5ECF00E918FF /* Main.storyboard */,
 				884E141A1E8B5ECF00E918FF /* Assets.xcassets */,
 				884E141C1E8B5ECF00E918FF /* LaunchScreen.storyboard */,
@@ -425,6 +430,7 @@
 				883D20561EBADDA100218DB9 /* UIView+Frame.m in Sources */,
 				884E14131E8B5ECF00E918FF /* AppDelegate.m in Sources */,
 				884E14101E8B5ECF00E918FF /* main.m in Sources */,
+				889886731F42CB2900AFBEB6 /* LeftViewController.m in Sources */,
 				8806C80F1E9F1B8700042BE1 /* ShowImageViewController.m in Sources */,
 				883D20571EBADDA100218DB9 /* TitleScrollHelper.m in Sources */,
 			);

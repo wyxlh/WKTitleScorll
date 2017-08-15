@@ -1,44 +1,43 @@
 //
-//  ViewController.m
+//  LeftViewController.m
 //  Demo
 //
-//  Created by 王宇 on 2017/3/29.
+//  Created by 王宇 on 2017/8/15.
 //  Copyright © 2017年 wy. All rights reserved.
 //
-
 //获取设备的物理高度
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 //获取设备的物理宽度
 #define ScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 #define SKOrangeColor    [UIColor colorWithRed:250/255. green:50/255. blue:100/255. alpha:1]
-#import "ViewController.h"
+#import "LeftViewController.h"
 #import "TitleScrollView.h"
 #import "WKChildViewController.h"
 #import "UIView+Frame.h"
-@interface ViewController ()<UIScrollViewDelegate>
+@interface LeftViewController ()<UIScrollViewDelegate>
 @property (nonatomic, weak) UIScrollView *contentView;
 @property (nonatomic,strong)TitleScrollView *titleScroll;
 @property (nonatomic,strong)NSArray *titleArr;
 @end
 
-@implementation ViewController
+@implementation LeftViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.titleArr=@[@"全部订单",@"待支付",@"待发货",@"待收货",@"待评价"]; //5个
-//    self.titleArr=@[@"全部订单",@"待支付",@"待发货",@"待收货",@"待评价",@"待评价",@"待评价",@"待评价",@"待评价",@"待评价"];//10个
+    self.titleArr=@[@"全部订单",@"待支付",@"待发货",@"待收货",@"待评价",@"待评价",@"待评价",@"待评价",@"待评价",@"待评价"];//10个
     [self addChildViewControllers];
     //底部的scrollview
     [self setupContentView];
 }
+
 #pragma mark - 懒加载 设置顶部标签栏  选如果你需要平分界面 scrollEnable 设为 NO lineEqualWidth ->YES  紧挨着  scrollEnable-->YES   lineEqualWidth-->NO 选中字体是否变大 isLarger
 - (TitleScrollView *)titleScroll
 {
     if (!_titleScroll)
     {
         WS(weakSelf)
-        _titleScroll = [[TitleScrollView alloc] initWithFrame:CGRectMake(0,64, ScreenWidth, 47)  TitleArray:self.titleArr selectedIndex:0 scrollEnable:NO lineEqualWidth:YES isLarger:YES selectColor:SKOrangeColor defaultColor:[UIColor blackColor] SelectBlock:^(NSInteger index) {
+        _titleScroll = [[TitleScrollView alloc] initWithFrame:CGRectMake(0,64, ScreenWidth, 47)  TitleArray:self.titleArr selectedIndex:0 scrollEnable:YES lineEqualWidth:YES isLarger:YES selectColor:SKOrangeColor defaultColor:[UIColor blackColor] SelectBlock:^(NSInteger index) {
             [weakSelf titleClick:index];
         }];
         _titleScroll.backgroundColor = [UIColor whiteColor];
@@ -104,6 +103,7 @@
         [self addChildViewController:child];
     }
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

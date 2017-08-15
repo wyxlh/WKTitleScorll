@@ -23,14 +23,15 @@ typedef void (^SelectBlock)(NSInteger index);
  *  @param selectColor    选择颜色
  *  @param defaultColor   默认颜色
  *  @param selectBlock    点击标题回调方法
+ *  @param isLarger       字体是否变大
  *
- *  @return <#return value description#>
  */
 -(instancetype)initWithFrame:(CGRect)frame
                   TitleArray:(NSArray *)titleArray
                selectedIndex:(NSInteger)selected_index
                 scrollEnable:(BOOL)scrollEnable
               lineEqualWidth:(BOOL)isEqualWidth
+                    isLarger:(BOOL)isLarger
                  selectColor:(UIColor *)selectColor
                 defaultColor:(UIColor *)defaultColor
                  SelectBlock:(SelectBlock)selectBlock;
@@ -54,7 +55,7 @@ typedef void (^SelectBlock)(NSInteger index);
 /**
  *  是否需要均分
  */
-@property (nonatomic,assign)BOOL       isEqualWidth;
+@property (nonatomic, assign)BOOL       isEqualWidth;
 /**
  *  修改选中标题
  *
@@ -62,30 +63,35 @@ typedef void (^SelectBlock)(NSInteger index);
  */
 -(void)setSelectedIndex:(NSInteger)selectedIndex;
 /**
- *  把按钮放出来以便改变可以其颜色 （陈亮）
+ *  把按钮放出来以便改变可以其颜色
  */
-@property (nonatomic,strong) UIButton *titleButton;
+@property (nonatomic, strong) UIButton *titleButton;
 /**
  *  把line放出来,有的界面不需要显示,直接隐藏它
  */
-@property (nonatomic,strong) UILabel        *line;
+@property (nonatomic, strong) UILabel        *line;
 /**
  * 把选中的按钮放出来以便改变可以其颜色
  */
-@property (nonatomic,strong) UIButton       *selectedButt;
+@property (nonatomic, strong) UIButton       *selectedButt;
 /**
  *  把所有的按钮暴露出来 （XinMa）
  */
-@property (nonatomic,strong) NSMutableArray *buttonArray;
+@property (nonatomic, strong) NSMutableArray *buttonArray;
 /**
  *  默认颜色 （XinMa）
  */
-@property (nonatomic,strong) UIColor *defaultColor;
+@property (nonatomic, strong) UIColor *defaultColor;
 
 /**
  *  选中的颜色
  */
-@property (nonatomic,strong) UIColor *selectColor;
+@property (nonatomic, strong) UIColor *selectColor;
+
+/**
+ 字体是否变大
+ */
+@property (nonatomic, assign) BOOL isLarger;
 
 /**
  * 默认第几个被选中

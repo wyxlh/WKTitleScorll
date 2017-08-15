@@ -9,6 +9,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Left View Controller-->
+        <scene sceneID="YLD-PP-Mpy">
+            <objects>
+                <viewController id="6ja-lp-CNb" customClass="LeftViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B9K-Fk-hP1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Umg-bT-6OS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5eT-lJ-h2g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Guu-v6-02p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4D-NI-2id" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="324"/>
+        </scene>
         <!--标题-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -23,6 +42,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="标题" id="weZ-g3-0ER">
+                        <barButtonItem key="leftBarButtonItem" title="切换" id="57b-B1-ZIF">
+                            <connections>
+                                <segue destination="6ja-lp-CNb" kind="push" id="Snm-hq-gyv"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="dvM-oc-6vg">
                             <connections>
                                 <segue destination="kJP-oI-qfE" kind="push" id="w1t-63-dSF"/>
@@ -32,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919.20000000000005" y="106.59670164917542"/>
+            <point key="canvasLocation" x="721" y="72"/>
         </scene>
         <!--Show Image View Controller-->
         <scene sceneID="TFf-UI-DCa">
@@ -75,7 +99,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1630" y="124"/>
+            <point key="canvasLocation" x="1505" y="-369"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JME-9T-joF">
@@ -181,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEZ-3G-cUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2402" y="17"/>
+            <point key="canvasLocation" x="2250" y="-384"/>
         </scene>
     </scenes>
 </document>

@@ -29,6 +29,7 @@
                selectedIndex:(NSInteger)selected_index
                 scrollEnable:(BOOL)scrollEnable
               lineEqualWidth:(BOOL)isEqualWidth
+                    isLarger:(BOOL)isLarger
                  selectColor:(UIColor *)selectColor
                 defaultColor:(UIColor *)defaultColor
                  SelectBlock:(SelectBlock)selectBlock{
@@ -45,6 +46,7 @@
         self.buttonArray = [NSMutableArray new];
         self.block = selectBlock;
         self.isEqualWidth = isEqualWidth;
+        self.isLarger = isLarger;
         for (int i = 0; i<titleArray.count; i++)
         {
             NSString *title =titleArray[i];
@@ -65,6 +67,8 @@
                 self.selectedButt = self.titleButton;
                 self.line =[[UILabel alloc]init];
                 self.line.backgroundColor = selectColor;
+                self.line.layer.cornerRadius = 1.5;
+                self.line.layer.masksToBounds = YES;
                 [self addSubview:self.line];
             }
             [ self.buttonArray addObject:self.titleButton];
@@ -102,14 +106,28 @@
 
 -(void)buttonOffset:(UIButton *)butt
 {
-    CGSize size = [TitleScrollHelper titleSize:butt.titleLabel.text height:butt.frame.size.height];
-    CGFloat width = self.isEqualWidth?self.width/ self.buttonArray.count:size.width;
-    self.line.bounds = CGRectMake(0, 0, width, 1.5);
-    self.line.center = CGPointMake(butt.center.x, butt.frame.size.height-0.75);
+    // 下边的线等分
+//    CGSize size = [TitleScrollHelper titleSize:butt.titleLabel.text height:butt.frame.size.height];
+//    CGFloat width = self.isEqualWidth?self.width/ self.buttonArray.count:size.width;
+//    self.line.bounds = CGRectMake(0, 0, width, 3);
+//    self.line.center = CGPointMake(butt.center.x, butt.frame.size.height-0.75);
+    self.line.bounds = CGRectMake(0, 0, 30, 3);
+    self.line.center = CGPointMake(butt.center.x, butt.frame.size.height-4);
     for (UIButton *button in  self.buttonArray)
     {
-        BOOL isSelected = button.tag == butt.tag?YES:NO;
-        [button setSelected:isSelected];
+        if (self.isLarger) {
+            if (button.tag == butt.tag) {
+                button.selected = YES;
+                button.titleLabel.font = [UIFont boldSystemFontOfSize:15];
+            }else{
+                button.selected = NO;
+                button.titleLabel.font =titleFont;
+            }
+        }else{
+            BOOL isSelected = button.tag == butt.tag?YES:NO;
+            [button setSelected:isSelected];
+        }
+        
     }
     if (butt.center.x<=self.center.x)
     {
