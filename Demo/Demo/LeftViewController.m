@@ -19,6 +19,7 @@
 @property (nonatomic, weak) UIScrollView *contentView;
 @property (nonatomic,strong)TitleScrollView *titleScroll;
 @property (nonatomic,strong)NSArray *titleArr;
+@property (nonatomic, assign)BOOL flag;
 @end
 
 @implementation LeftViewController
@@ -37,11 +38,11 @@
     if (!_titleScroll)
     {
         WS(weakSelf)
-        _titleScroll = [[TitleScrollView alloc] initWithFrame:CGRectMake(0,64, ScreenWidth, 47)  TitleArray:self.titleArr selectedIndex:0 scrollEnable:YES lineEqualWidth:YES isLarger:YES selectColor:SKOrangeColor defaultColor:[UIColor blackColor] SelectBlock:^(NSInteger index) {
+        _titleScroll = [[TitleScrollView alloc] initWithFrame:CGRectMake(0,64, ScreenWidth, 47)  TitleArray:self.titleArr selectedIndex:0 scrollEnable:YES lineEqualWidth:YES isLarger:NO selectColor:SKOrangeColor defaultColor:[UIColor blackColor] SelectBlock:^(NSInteger index) {
             [weakSelf titleClick:index];
         }];
         _titleScroll.backgroundColor = [UIColor whiteColor];
-        
+//        _titleScroll.line.hidden = YES;
         [self.view addSubview:_titleScroll];
     }
     return _titleScroll;
@@ -92,6 +93,35 @@
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
     //点击butto
     [self.titleScroll setSelectedIndex:index];
+}
+#pragma mark  改变字的渐变颜色
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    //获取标题
+    NSInteger  leftI = scrollView.contentOffset.x/ScreenWidth;
+    NSInteger  rightI = leftI+1;
+    NSLog(@"%f",scrollView.contentOffset.x);
+    //获取左边的按钮
+    UIButton *leftBtn  = self.titleScroll.buttonArray[leftI];
+    //获取右边的按钮
+    UIButton *rightBtn;
+    if (rightI<self.titleScroll.buttonArray.count) {
+        rightBtn  = self.titleScroll.buttonArray[rightI];
+    }
+    CGFloat scaleR = scrollView.contentOffset.x/ScreenWidth;
+    scaleR -= leftI;
+    CGFloat scaleL = 1- scaleR;
+    //缩放按钮
+    leftBtn.transform = CGAffineTransformMakeScale(scaleL *0.01 + 1, scaleL*0.01 + 1);
+    rightBtn.transform = CGAffineTransformMakeScale(scaleR*0.01 + 1, scaleR*0.01 + 1);
+    // 如果想让字变大一点, 就使用下面的 但是使用这个最好调节把下面的线隐藏掉, 或者自己调一下
+//    leftBtn.transform = CGAffineTransformMakeScale(scaleL *0.1 + 1, scaleL*0.1 + 1);
+//    rightBtn.transform = CGAffineTransformMakeScale(scaleR*0.1 + 1, scaleR*0.1 + 1);
+    //颜色渐变
+    UIColor *rightColor  = [UIColor colorWithRed:scaleR green:0 blue:0 alpha:1];
+    UIColor *leftColor  = [UIColor colorWithRed:scaleL green:0 blue:0 alpha:1];
+    [rightBtn setTitleColor:rightColor forState:UIControlStateNormal];
+    [leftBtn setTitleColor:leftColor forState:UIControlStateNormal];
+    
 }
 
 

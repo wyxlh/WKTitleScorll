@@ -27,6 +27,7 @@
 		884E141E1E8B5ECF00E918FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 884E141C1E8B5ECF00E918FF /* LaunchScreen.storyboard */; };
 		884E14291E8B5ED000E918FF /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 884E14281E8B5ED000E918FF /* DemoTests.m */; };
 		884E14341E8B5ED000E918FF /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 884E14331E8B5ED000E918FF /* DemoUITests.m */; };
+		885E38BB1F441E340092BEE1 /* TransitionAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885E38BA1F441E340092BEE1 /* TransitionAnimationViewController.m */; };
 		889886731F42CB2900AFBEB6 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889886721F42CB2900AFBEB6 /* LeftViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,8 @@
 		884E142F1E8B5ED000E918FF /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		884E14331E8B5ED000E918FF /* DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoUITests.m; sourceTree = "<group>"; };
 		884E14351E8B5ED000E918FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		885E38B91F441E340092BEE1 /* TransitionAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionAnimationViewController.h; sourceTree = "<group>"; };
+		885E38BA1F441E340092BEE1 /* TransitionAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionAnimationViewController.m; sourceTree = "<group>"; };
 		889886711F42CB2900AFBEB6 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		889886721F42CB2900AFBEB6 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +182,7 @@
 		884E140D1E8B5ECF00E918FF /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				885E38B81F441B510092BEE1 /* 转场动画 */,
 				883D204F1EBADD8B00218DB9 /* WKTitleScroll */,
 				880686FF1EAF71020007F77C /* AttributedString */,
 				8822C69F1E8BA87B006FB3B5 /* WKChildViewController.m */,
@@ -226,6 +230,15 @@
 				884E14351E8B5ED000E918FF /* Info.plist */,
 			);
 			path = DemoUITests;
+			sourceTree = "<group>";
+		};
+		885E38B81F441B510092BEE1 /* 转场动画 */ = {
+			isa = PBXGroup;
+			children = (
+				885E38B91F441E340092BEE1 /* TransitionAnimationViewController.h */,
+				885E38BA1F441E340092BEE1 /* TransitionAnimationViewController.m */,
+			);
+			path = "转场动画";
 			sourceTree = "<group>";
 		};
 		9609B4066C2CB2B50EBEB90F /* Pods */ = {
@@ -433,6 +446,7 @@
 				889886731F42CB2900AFBEB6 /* LeftViewController.m in Sources */,
 				8806C80F1E9F1B8700042BE1 /* ShowImageViewController.m in Sources */,
 				883D20571EBADDA100218DB9 /* TitleScrollHelper.m in Sources */,
+				885E38BB1F441E340092BEE1 /* TransitionAnimationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

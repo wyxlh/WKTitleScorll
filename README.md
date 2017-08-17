@@ -14,7 +14,7 @@
 if (!_titleScroll)
 {
 WS(weakSelf)
-_titleScroll = [[TitleScrollView alloc] initWithFrame:CGRectMake(0,64, ScreenWidth, 47)  TitleArray:self.titleArr selectedIndex:0 scrollEnable:NO lineEqualWidth:YES selectColor:SKOrangeColor defaultColor:[UIColor blackColor] SelectBlock:^(NSInteger index) {
+_titleScroll = [[TitleScrollView alloc] initWithFrame:CGRectMake(0,64, ScreenWidth, 47)  TitleArray:self.titleArr selectedIndex:0 scrollEnable:NO lineEqualWidth:YES isLarger:YES selectColor:SKOrangeColor defaultColor:[UIColor blackColor] SelectBlock:^(NSInteger index) {
 [weakSelf titleClick:index];
 }];
 _titleScroll.backgroundColor = [UIColor whiteColor];
@@ -24,7 +24,7 @@ _titleScroll.backgroundColor = [UIColor whiteColor];
 return _titleScroll;
 }
 ```
-* 添加指示图 并 实现对应的协议
+* 3添加指示图 并 实现对应的协议
 ```
 #pragma mark 底部的scrollview
 -(void)setupContentView {
@@ -90,3 +90,4 @@ child.index = i;
 # 富文本的使用 
 * 详细见 WKAttributdeLblViewController 这里面的
 * 新增富文本, 设置行间距
+# 优化 TitleScollView 滑动渐变字体颜色, 和 选中的时候是否改天自己大小

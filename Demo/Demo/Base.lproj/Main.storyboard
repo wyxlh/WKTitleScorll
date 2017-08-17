@@ -22,7 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Guu-v6-02p"/>
+                    <navigationItem key="navigationItem" id="Guu-v6-02p">
+                        <barButtonItem key="leftBarButtonItem" title="转场动画" id="enW-u1-6pO">
+                            <connections>
+                                <action selector="clickLeft:" destination="6ja-lp-CNb" id="G98-th-wm5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4D-NI-2id" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

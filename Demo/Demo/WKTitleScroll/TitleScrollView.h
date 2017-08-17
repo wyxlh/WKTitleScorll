@@ -75,7 +75,7 @@ typedef void (^SelectBlock)(NSInteger index);
  */
 @property (nonatomic, strong) UIButton       *selectedButt;
 /**
- *  把所有的按钮暴露出来 （XinMa）
+ *  把所有的按钮暴露出来
  */
 @property (nonatomic, strong) NSMutableArray *buttonArray;
 /**

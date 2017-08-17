@@ -27,7 +27,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.titleArr=@[@"全部订单",@"待支付",@"待发货",@"待收货",@"待评价"]; //5个
-//    self.titleArr=@[@"全部订单",@"待支付",@"待发货",@"待收货",@"待评价",@"待评价",@"待评价",@"待评价",@"待评价",@"待评价"];//10个
     [self addChildViewControllers];
     //底部的scrollview
     [self setupContentView];
