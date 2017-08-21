@@ -90,4 +90,4 @@ child.index = i;
 # 富文本的使用 
 * 详细见 WKAttributdeLblViewController 这里面的
 * 新增富文本, 设置行间距
-# 优化 TitleScollView 滑动渐变字体颜色, 和 选中的时候是否改天自己大小
+# 优化 TitleScollView 滑动渐变字体颜色, 和 选中的时候是否改天字体大小
