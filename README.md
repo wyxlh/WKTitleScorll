@@ -93,7 +93,7 @@ child.index = i;
 # 优化 TitleScollView 滑动渐变字体颜色, 和 选中的时候是否改天字体大小
 
 # 适配iPhone X 的方案
-![简书地址](http://www.jianshu.com/p/6ec9b4f3eb2b)
+[简书地址](http://www.jianshu.com/p/6ec9b4f3eb2b)
 ```
 -(NSInteger)topHeight{
 return ScreenHeight > 736 ? 84 : 64;
