@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WKTitleScorll"
-  s.version      = "1.0"
+  s.version      = "1.0.0"
   s.summary      = "A multi interface self map for iOS"
 
   # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "WKTitleScorll"
+  s.description  = "WKTitleScorll is a multi interface self map for iOS"
 
   s.homepage     = "https://github.com/wyxlh/WKTitleScorll"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
   s.author             = { "wyxlh" => "Yuki" }
   # Or just: s.author    = "wyxlh"
   # s.authors            = { "wyxlh" => "Yuki" }
-  # s.social_media_url   = "http://twitter.com/wyxlh"
+  # s.social_media_url   = "https://github.com/wyxlh/WKTitleScorll"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -63,7 +63,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  # s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "WKTitleScorll/Demo/WKTitleScroll/Classes/**/*"
+  s.source_files  = "WKTitleScorll", "WKTitleScorll/Demo/WKTitleScorll/**/*"
   s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -115,8 +115,8 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  # s.framework  = "UIKit"
+  # s.frameworks = "UIKit", "AnotherFramework"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"

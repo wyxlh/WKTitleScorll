@@ -38,7 +38,7 @@
     if (!_titleScroll)
     {
         WS(weakSelf)
-        _titleScroll = [[TitleScrollView alloc] initWithFrame:CGRectMake(0,64, ScreenWidth, 47)  TitleArray:self.titleArr selectedIndex:0 scrollEnable:YES lineEqualWidth:YES isLarger:NO selectColor:SKOrangeColor defaultColor:[UIColor blackColor] SelectBlock:^(NSInteger index) {
+        _titleScroll = [[TitleScrollView alloc] initWithFrame:CGRectMake(0,[self topHeight], ScreenWidth, 47)  TitleArray:self.titleArr selectedIndex:0 scrollEnable:YES lineEqualWidth:YES isLarger:NO selectColor:SKOrangeColor defaultColor:[UIColor blackColor] SelectBlock:^(NSInteger index) {
             [weakSelf titleClick:index];
         }];
         _titleScroll.backgroundColor = [UIColor whiteColor];
@@ -132,6 +132,10 @@
         child.index = i;
         [self addChildViewController:child];
     }
+}
+
+-(NSInteger)topHeight{
+    return ScreenHeight > 736 ? 84 : 64;
 }
 
 - (void)didReceiveMemoryWarning {

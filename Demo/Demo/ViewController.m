@@ -27,6 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.titleArr=@[@"全部订单",@"待支付",@"待发货",@"待收货",@"待评价"]; //5个
+//    self.navigationController.navigationBar.hidden = YES;
+    NSLog(@"%.2f",ScreenHeight);
     [self addChildViewControllers];
     //底部的scrollview
     [self setupContentView];
@@ -37,7 +39,7 @@
     if (!_titleScroll)
     {
         WS(weakSelf)
-        _titleScroll = [[TitleScrollView alloc] initWithFrame:CGRectMake(0,64, ScreenWidth, 47)  TitleArray:self.titleArr selectedIndex:0 scrollEnable:NO lineEqualWidth:YES isLarger:YES selectColor:SKOrangeColor defaultColor:[UIColor blackColor] SelectBlock:^(NSInteger index) {
+        _titleScroll = [[TitleScrollView alloc] initWithFrame:CGRectMake(0,[self topHeight], ScreenWidth, 47)  TitleArray:self.titleArr selectedIndex:0 scrollEnable:NO lineEqualWidth:YES isLarger:YES selectColor:SKOrangeColor defaultColor:[UIColor blackColor] SelectBlock:^(NSInteger index) {
             [weakSelf titleClick:index];
         }];
         _titleScroll.backgroundColor = [UIColor whiteColor];
@@ -105,7 +107,12 @@
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    
     // Dispose of any resources that can be recreated.
+}
+
+-(NSInteger)topHeight{
+    return ScreenHeight > 736 ? 84 : 64;
 }
 
 
