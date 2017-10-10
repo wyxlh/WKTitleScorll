@@ -27,6 +27,8 @@
 		884E141E1E8B5ECF00E918FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 884E141C1E8B5ECF00E918FF /* LaunchScreen.storyboard */; };
 		884E14291E8B5ED000E918FF /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 884E14281E8B5ED000E918FF /* DemoTests.m */; };
 		884E14341E8B5ED000E918FF /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 884E14331E8B5ED000E918FF /* DemoUITests.m */; };
+		8857BB2B1F751FD6004675E2 /* WKTextHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8857BB2A1F751FD6004675E2 /* WKTextHeadView.m */; };
+		8857BB2D1F751FE1004675E2 /* WKTextHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8857BB2C1F751FE1004675E2 /* WKTextHeadView.xib */; };
 		885E38BB1F441E340092BEE1 /* TransitionAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885E38BA1F441E340092BEE1 /* TransitionAnimationViewController.m */; };
 		889886731F42CB2900AFBEB6 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889886721F42CB2900AFBEB6 /* LeftViewController.m */; };
 		88DF86531F735FAF00C05923 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88DF86521F735FAF00C05923 /* Images.xcassets */; };
@@ -91,6 +93,9 @@
 		884E142F1E8B5ED000E918FF /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		884E14331E8B5ED000E918FF /* DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoUITests.m; sourceTree = "<group>"; };
 		884E14351E8B5ED000E918FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8857BB291F751FD6004675E2 /* WKTextHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKTextHeadView.h; sourceTree = "<group>"; };
+		8857BB2A1F751FD6004675E2 /* WKTextHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKTextHeadView.m; sourceTree = "<group>"; };
+		8857BB2C1F751FE1004675E2 /* WKTextHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WKTextHeadView.xib; sourceTree = "<group>"; };
 		885E38B91F441E340092BEE1 /* TransitionAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionAnimationViewController.h; sourceTree = "<group>"; };
 		885E38BA1F441E340092BEE1 /* TransitionAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionAnimationViewController.m; sourceTree = "<group>"; };
 		889886711F42CB2900AFBEB6 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -207,8 +212,6 @@
 				884E14151E8B5ECF00E918FF /* ViewController.m */,
 				889886711F42CB2900AFBEB6 /* LeftViewController.h */,
 				889886721F42CB2900AFBEB6 /* LeftViewController.m */,
-				88DF86541F738B3B00C05923 /* TextFrameViewController.h */,
-				88DF86551F738B3B00C05923 /* TextFrameViewController.m */,
 				884E14171E8B5ECF00E918FF /* Main.storyboard */,
 				884E141A1E8B5ECF00E918FF /* Assets.xcassets */,
 				884E141C1E8B5ECF00E918FF /* LaunchScreen.storyboard */,
@@ -223,9 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				884E140F1E8B5ECF00E918FF /* main.m */,
-				88DF86571F738CFB00C05923 /* WKTextFrameTableViewCell.h */,
-				88DF86581F738CFB00C05923 /* WKTextFrameTableViewCell.m */,
-				88DF86591F738CFB00C05923 /* WKTextFrameTableViewCell.xib */,
+				8857BB261F751F1D004675E2 /* TextDemo */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -246,6 +247,37 @@
 				884E14351E8B5ED000E918FF /* Info.plist */,
 			);
 			path = DemoUITests;
+			sourceTree = "<group>";
+		};
+		8857BB261F751F1D004675E2 /* TextDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8857BB281F751F38004675E2 /* controller */,
+				8857BB271F751F2E004675E2 /* view */,
+			);
+			path = TextDemo;
+			sourceTree = "<group>";
+		};
+		8857BB271F751F2E004675E2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				88DF86571F738CFB00C05923 /* WKTextFrameTableViewCell.h */,
+				88DF86581F738CFB00C05923 /* WKTextFrameTableViewCell.m */,
+				88DF86591F738CFB00C05923 /* WKTextFrameTableViewCell.xib */,
+				8857BB291F751FD6004675E2 /* WKTextHeadView.h */,
+				8857BB2A1F751FD6004675E2 /* WKTextHeadView.m */,
+				8857BB2C1F751FE1004675E2 /* WKTextHeadView.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8857BB281F751F38004675E2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				88DF86541F738B3B00C05923 /* TextFrameViewController.h */,
+				88DF86551F738B3B00C05923 /* TextFrameViewController.m */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 		885E38B81F441B510092BEE1 /* 转场动画 */ = {
@@ -336,6 +368,7 @@
 				TargetAttributes = {
 					884E140A1E8B5ECF00E918FF = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8UNEFE2V3S;
 						ProvisioningStyle = Automatic;
 					};
 					884E14231E8B5ED000E918FF = {
@@ -376,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				884E141E1E8B5ECF00E918FF /* LaunchScreen.storyboard in Resources */,
+				8857BB2D1F751FE1004675E2 /* WKTextHeadView.xib in Resources */,
 				88DF86531F735FAF00C05923 /* Images.xcassets in Resources */,
 				884E141B1E8B5ECF00E918FF /* Assets.xcassets in Resources */,
 				884E14191E8B5ECF00E918FF /* Main.storyboard in Resources */,
@@ -467,6 +501,7 @@
 				8806C80F1E9F1B8700042BE1 /* ShowImageViewController.m in Sources */,
 				883D20571EBADDA100218DB9 /* TitleScrollHelper.m in Sources */,
 				885E38BB1F441E340092BEE1 /* TransitionAnimationViewController.m in Sources */,
+				8857BB2B1F751FD6004675E2 /* WKTextHeadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,9 +652,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8UNEFE2V3S;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangyu.cn.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -632,9 +667,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8UNEFE2V3S;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangyu.cn.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
