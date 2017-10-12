@@ -20,6 +20,11 @@
 @property (nonatomic, weak) UIScrollView *contentView;
 @property (nonatomic,strong)TitleScrollView *titleScroll;
 @property (nonatomic,strong)NSArray *titleArr;
+@property (nonatomic, strong) DCPagerProgressView *pregressView;
+/** 进度条 */
+@property (nonatomic, assign) CGFloat progress;
+/** 是否拉伸 */
+@property (nonatomic, assign) BOOL isStretch;
 @end
 
 @implementation ViewController
@@ -27,8 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.titleArr=@[@"全部订单",@"待支付",@"待发货",@"待收货",@"待评价"]; //5个
-//    self.navigationController.navigationBar.hidden = YES;
-    NSLog(@"%.2f",ScreenHeight);
+    self.isStretch = YES;
     [self addChildViewControllers];
     //底部的scrollview
     [self setupContentView];
@@ -43,7 +47,7 @@
             [weakSelf titleClick:index];
         }];
         _titleScroll.backgroundColor = [UIColor whiteColor];
-        
+        _pregressView                = _titleScroll.line;
         [self.view addSubview:_titleScroll];
     }
     return _titleScroll;
@@ -70,6 +74,7 @@
 #pragma mark 便签栏按钮点击
 -(void)titleClick:(NSInteger)index {
     //滚动,切换子控制器
+    self.isStretch = NO;
     CGPoint offset = self.contentView.contentOffset;
     offset.x = index * self.contentView.width;
     [self.contentView setContentOffset:offset animated:YES];
@@ -87,6 +92,14 @@
     vc.view.height = scrollView.height;//设置控制器的view的height值为整个屏幕的高度（默认是比屏幕少20）
     [scrollView addSubview:vc.view];
 }
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    [self bottomBarNaughtyWithOffset:scrollView.contentOffset.x];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    self.isStretch = YES;
+}
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     [self scrollViewDidEndScrollingAnimation:scrollView];
@@ -95,15 +108,23 @@
     //点击butto
     [self.titleScroll setSelectedIndex:index];
 }
-
-
-
+#pragma mark 添加子视图
 -(void)addChildViewControllers{
     for (int i = 0; i < self.titleArr.count; i++) {
         WKChildViewController *child = [[WKChildViewController alloc]init];
         child.index = i;
         [self addChildViewController:child];
     }
+}
+#pragma mark - 底部滚动条滚动
+- (void)bottomBarNaughtyWithOffset:(CGFloat)offsetx
+{
+    if (offsetx < 0) //最小
+    {
+        offsetx = 0;
+    }
+    _pregressView.isStretch  = self.isStretch;
+    _pregressView.progress = offsetx / _titleScroll.width;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

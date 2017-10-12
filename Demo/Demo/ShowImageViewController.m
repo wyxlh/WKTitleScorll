@@ -11,6 +11,7 @@
 @interface ShowImageViewController ()<UIScrollViewDelegate>
 @property (nonatomic,strong) NSArray *dataArr;
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftCons;
 @property (weak, nonatomic) UIImageView *lastImageView;
 @property (nonatomic, assign)CGRect originalFrame;
 @property (weak, nonatomic) UIScrollView *scrView;
@@ -80,6 +81,10 @@
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+- (IBAction)clickBtn:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    self.leftCons.constant = sender.selected ? 100 : 20;
 }
 
 @end

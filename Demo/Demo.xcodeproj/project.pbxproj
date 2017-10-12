@@ -27,6 +27,7 @@
 		884E141E1E8B5ECF00E918FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 884E141C1E8B5ECF00E918FF /* LaunchScreen.storyboard */; };
 		884E14291E8B5ED000E918FF /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 884E14281E8B5ED000E918FF /* DemoTests.m */; };
 		884E14341E8B5ED000E918FF /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 884E14331E8B5ED000E918FF /* DemoUITests.m */; };
+		8850FD7F1F8CC8C40004A11F /* DCPagerProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8850FD7D1F8CC8C30004A11F /* DCPagerProgressView.m */; };
 		8857BB2B1F751FD6004675E2 /* WKTextHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8857BB2A1F751FD6004675E2 /* WKTextHeadView.m */; };
 		8857BB2D1F751FE1004675E2 /* WKTextHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8857BB2C1F751FE1004675E2 /* WKTextHeadView.xib */; };
 		885E38BB1F441E340092BEE1 /* TransitionAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885E38BA1F441E340092BEE1 /* TransitionAnimationViewController.m */; };
@@ -93,6 +94,8 @@
 		884E142F1E8B5ED000E918FF /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		884E14331E8B5ED000E918FF /* DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoUITests.m; sourceTree = "<group>"; };
 		884E14351E8B5ED000E918FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8850FD7D1F8CC8C30004A11F /* DCPagerProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCPagerProgressView.m; sourceTree = "<group>"; };
+		8850FD7E1F8CC8C30004A11F /* DCPagerProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCPagerProgressView.h; sourceTree = "<group>"; };
 		8857BB291F751FD6004675E2 /* WKTextHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKTextHeadView.h; sourceTree = "<group>"; };
 		8857BB2A1F751FD6004675E2 /* WKTextHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKTextHeadView.m; sourceTree = "<group>"; };
 		8857BB2C1F751FE1004675E2 /* WKTextHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WKTextHeadView.xib; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 				883D20531EBADDA100218DB9 /* TitleScrollHelper.h */,
 				883D20541EBADDA100218DB9 /* TitleScrollView.h */,
 				883D20551EBADDA100218DB9 /* TitleScrollView.m */,
+				8850FD7E1F8CC8C30004A11F /* DCPagerProgressView.h */,
+				8850FD7D1F8CC8C30004A11F /* DCPagerProgressView.m */,
 			);
 			path = WKTitleScroll;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 				88DF865A1F738CFB00C05923 /* WKTextFrameTableViewCell.m in Sources */,
 				88DF86561F738B3B00C05923 /* TextFrameViewController.m in Sources */,
 				883D20701EBB434C00218DB9 /* UILabel+YBAttributeTextTapAction.m in Sources */,
+				8850FD7F1F8CC8C40004A11F /* DCPagerProgressView.m in Sources */,
 				883D20581EBADDA100218DB9 /* TitleScrollView.m in Sources */,
 				883D20731EBB435B00218DB9 /* WKAttributdeLblViewController.m in Sources */,
 				883D20561EBADDA100218DB9 /* UIView+Frame.m in Sources */,

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "TitleScrollHelper.h"
-#import <objc/runtime.h>
+//#import <objc/runtime.h>
+#import "DCPagerProgressView.h"
 @interface TitleScrollView : UIScrollView
 typedef void (^SelectBlock)(NSInteger index);
 
@@ -69,7 +70,7 @@ typedef void (^SelectBlock)(NSInteger index);
 /**
  *  把line放出来,有的界面不需要显示,直接隐藏它
  */
-@property (nonatomic, strong) UILabel        *line;
+@property (nonatomic, strong) DCPagerProgressView        *line;
 /**
  * 把选中的按钮放出来以便改变可以其颜色
  */
@@ -96,5 +97,9 @@ typedef void (^SelectBlock)(NSInteger index);
 /**
  * 默认第几个被选中
  */
-@property (nonatomic,assign) NSInteger selected_index;
+@property (nonatomic, assign) NSInteger selected_index;
+/**
+ 传入数组的 frame
+ */
+@property (nonatomic, strong) NSMutableArray *pregressFrames;
 @end

@@ -9,6 +9,8 @@
 #import "TitleScrollView.h"
 #import "UIView+Frame.h"
 #import "TitleScrollHelper.h"
+//获取设备的物理宽度
+#define ScreenWidth  [UIScreen mainScreen].bounds.size.width
 @implementation TitleScrollView
 /**
  *   创建一个标题滚动栏
@@ -46,6 +48,7 @@
         self.buttonArray = [NSMutableArray new];
         self.block = selectBlock;
         self.isEqualWidth = isEqualWidth;
+        self.scrollEnable = scrollEnable;
         self.isLarger = isLarger;
         for (int i = 0; i<titleArray.count; i++)
         {
@@ -59,18 +62,22 @@
             [self.titleButton addTarget:self action:@selector(headButtonClick:) forControlEvents:UIControlEventTouchUpInside];
             self.titleButton.titleLabel.font =titleFont;
             self.titleButton.tag = i;
+            CGRect frame = CGRectMake(orign_x, 43, 30, 3);
+            [self.pregressFrames addObject:[NSValue valueWithCGRect:frame]];
             orign_x = orign_x+space+size.width;
             self.contentSize = CGSizeMake(orign_x, height);
             if (i == selected_index)
             {
                 [self.titleButton setSelected:YES];
                 self.selectedButt = self.titleButton;
-                self.line =[[UILabel alloc]init];
-                self.line.backgroundColor = selectColor;
+                self.line =[[DCPagerProgressView alloc]initWithFrame:CGRectMake(20, 43, ScreenWidth, 3.5)];
+                self.line.backgroundColor = [UIColor clearColor];
+                self.line.color = selectColor.CGColor;
                 self.line.layer.cornerRadius = 1.5;
                 self.line.layer.masksToBounds = YES;
                 [self addSubview:self.line];
             }
+            self.line.itemFrames = self.pregressFrames;
             [ self.buttonArray addObject:self.titleButton];
             [self addSubview:self.titleButton];
         }
@@ -111,8 +118,11 @@
 //    CGFloat width = self.isEqualWidth?self.width/ self.buttonArray.count:size.width;
 //    self.line.bounds = CGRectMake(0, 0, width, 3);
 //    self.line.center = CGPointMake(butt.center.x, butt.frame.size.height-0.75);
-    self.line.bounds = CGRectMake(0, 0, 30, 3);
-    self.line.center = CGPointMake(butt.center.x, butt.frame.size.height-4);
+    if (self.scrollEnable) {
+        self.line.bounds = CGRectMake(0, 44, 30, 3);
+        self.line.backgroundColor = [UIColor colorWithRed:250/255. green:50/255. blue:100/255. alpha:1];
+        self.line.center = CGPointMake(butt.center.x, butt.frame.size.height-4);
+    }
     for (UIButton *button in  self.buttonArray)
     {
         if (self.isLarger) {
@@ -157,6 +167,18 @@
             break;
         }
     }
+}
+
+/**
+ 实例化
+ @param pregressFrames
+ */
+- (NSMutableArray *)pregressFrames
+{
+    if (!_pregressFrames) {
+        _pregressFrames = [NSMutableArray array];
+    }
+    return _pregressFrames;
 }
 
 @end

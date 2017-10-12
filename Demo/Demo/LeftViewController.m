@@ -15,17 +15,24 @@
 #import "TitleScrollView.h"
 #import "WKChildViewController.h"
 #import "UIView+Frame.h"
+#import "DCPagerProgressView.h"
 @interface LeftViewController ()<UIScrollViewDelegate>
 @property (nonatomic, weak) UIScrollView *contentView;
 @property (nonatomic,strong)TitleScrollView *titleScroll;
 @property (nonatomic,strong)NSArray *titleArr;
 @property (nonatomic, assign)BOOL flag;
+@property (nonatomic, strong) DCPagerProgressView *pregressView;
+/** 进度条 */
+@property (nonatomic, assign) CGFloat progress;
+/** 是否拉伸 */
+@property (nonatomic, assign) BOOL isStretch;
 @end
 
 @implementation LeftViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.isStretch = YES;
     self.titleArr=@[@"全部订单",@"待支付",@"待发货",@"待收货",@"待评价",@"待评价",@"待评价",@"待评价",@"待评价",@"待评价"];//10个
     [self addChildViewControllers];
     //底部的scrollview
@@ -43,6 +50,7 @@
         }];
         _titleScroll.backgroundColor = [UIColor whiteColor];
 //        _titleScroll.line.hidden = YES;
+//        _pregressView                = _titleScroll.line;
         [self.view addSubview:_titleScroll];
     }
     return _titleScroll;
@@ -96,6 +104,7 @@
 }
 #pragma mark  改变字的渐变颜色
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    [self bottomBarNaughtyWithOffset:scrollView.contentOffset.x];
     //获取标题
     NSInteger  leftI = scrollView.contentOffset.x/ScreenWidth;
     NSInteger  rightI = leftI+1;
@@ -124,6 +133,22 @@
     
 }
 
+
+//- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+//{
+//    self.isStretch = YES;
+//}
+//
+//#pragma mark - 底部滚动条滚动
+//- (void)bottomBarNaughtyWithOffset:(CGFloat)offsetx
+//{
+//    if (offsetx < 0) //最小
+//    {
+//        offsetx = 0;
+//    }
+//    _pregressView.isStretch  = self.isStretch;
+//    _pregressView.progress = offsetx / _titleScroll.width;
+//}
 
 
 -(void)addChildViewControllers{
