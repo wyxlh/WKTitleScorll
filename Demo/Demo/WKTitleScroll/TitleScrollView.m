@@ -171,7 +171,6 @@
 
 /**
  实例化
- @param pregressFrames
  */
 - (NSMutableArray *)pregressFrames
 {
