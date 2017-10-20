@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"测试 Frame";
-    [self.tableView reloadData];
+//    [self.tableView reloadData];
 }
 
 #pragma mark UITableViewDelegate,UITableViewDataSource

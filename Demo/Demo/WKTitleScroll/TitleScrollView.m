@@ -69,8 +69,8 @@
             if (i == selected_index)
             {
                 [self.titleButton setSelected:YES];
-                self.selectedButt = self.titleButton;
-                self.line =[[DCPagerProgressView alloc]initWithFrame:CGRectMake(20, 43, ScreenWidth, 3.5)];
+                self.selectedButt = self.titleButton;//这里使用 self.width+300 是为了让一个让其可以滚动能拖动
+                self.line =[[DCPagerProgressView alloc]initWithFrame:CGRectMake(18, 43, self.width+300, 3.5)];
                 self.line.backgroundColor = [UIColor clearColor];
                 self.line.color = selectColor.CGColor;
                 self.line.layer.cornerRadius = 1.5;
@@ -118,11 +118,11 @@
 //    CGFloat width = self.isEqualWidth?self.width/ self.buttonArray.count:size.width;
 //    self.line.bounds = CGRectMake(0, 0, width, 3);
 //    self.line.center = CGPointMake(butt.center.x, butt.frame.size.height-0.75);
-    if (self.scrollEnable) {
-        self.line.bounds = CGRectMake(0, 44, 30, 3);
-        self.line.backgroundColor = [UIColor colorWithRed:250/255. green:50/255. blue:100/255. alpha:1];
-        self.line.center = CGPointMake(butt.center.x, butt.frame.size.height-4);
-    }
+//    if (self.scrollEnable) {
+//        self.line.bounds = CGRectMake(0, 44, 30, 3);
+//        self.line.backgroundColor = [UIColor colorWithRed:250/255. green:50/255. blue:100/255. alpha:1];
+//        self.line.center = CGPointMake(butt.center.x, butt.frame.size.height-4);
+//    }
     for (UIButton *button in  self.buttonArray)
     {
         if (self.isLarger) {
