@@ -36,6 +36,8 @@
     [self addChildViewControllers];
     //底部的scrollview
     [self setupContentView];
+    UIWindow *window = [[UIWindow alloc]init];
+    [window bringSubviewToFront:self.view];
 }
 #pragma mark - 懒加载 设置顶部标签栏  选如果你需要平分界面 scrollEnable 设为 NO lineEqualWidth ->YES  紧挨着  scrollEnable-->YES   lineEqualWidth-->NO 选中字体是否变大 isLarger
 - (TitleScrollView *)titleScroll

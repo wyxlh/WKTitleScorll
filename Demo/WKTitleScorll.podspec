@@ -88,8 +88,16 @@ s.source           = { :git => "https://github.com/wyxlh/WKTitleScorll.git", :ta
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = 'WKTitleScorll/Demo/Demo/WKTitleScroll/**/*'
+  #s.source_files  = 'WKTitleScorll/Demo/Demo/**/*'
   s.exclude_files = "Classes/Exclude"
+  #分类
+  s.subspec 'WKTitleScorll' do |wktitlescorll|
+  wktitlescorll.source_files = 'WKTitleScorll/Demo/Demo/**/*'
+  # 主要文件
+  s.subspec 'WKTitleScroll' do |e|
+  e.source_files = 'Demo/WKTitleScroll/**/*'
+end
+end
 
   # s.public_header_files = "Classes/**/*.h"
 
