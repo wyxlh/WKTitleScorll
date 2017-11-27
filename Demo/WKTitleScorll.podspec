@@ -93,11 +93,12 @@ s.source           = { :git => "https://github.com/wyxlh/WKTitleScorll.git", :ta
   #分类
   s.subspec 'WKTitleScorll' do |wktitlescorll|
   wktitlescorll.source_files = 'WKTitleScorll/Demo/Demo/**/*'
+  end
   # 主要文件
   s.subspec 'WKTitleScroll' do |e|
   e.source_files = 'Demo/WKTitleScroll/**/*'
-end
-end
+  end
+
 
   # s.public_header_files = "Classes/**/*.h"
 
