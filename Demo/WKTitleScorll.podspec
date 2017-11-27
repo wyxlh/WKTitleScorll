@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WKTitleScorll"
-  s.version      = "1.0.0"
+  s.version      = "1.0.2"
   s.summary      = "A multi interface self map for iOS"
 
   # This description is used to generate tags and improve search results.
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "WKTitleScorll", "WKTitleScorll/Demo/WKTitleScorll/**/*"
+  s.source_files  = 'WKTitleScorll/Demo/Demo/WKTitleScroll/**/*'
   s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
